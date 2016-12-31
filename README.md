@@ -1,10 +1,10 @@
 # LambdaTestAsync
 
-[![Latest version](https://index.scala-lang.org/47deg/lambdatest/lambda-test-async/latest.svg)](https://index.scala-lang.org/47deg/lambdatestasync/lambda-test-async)
-[![Maven Central](https://img.shields.io/maven-central/v/com.fortysevendeg/lambda-test-sync_2.12.svg)](https://maven-badges.herokuapp.com/maven-central/com.fortysevendeg/lambda-test-async_2.12)
+[![Latest version](https://index.scala-lang.org/47deg/lambdatestasync/lambda-test-async/latest.svg)](https://index.scala-lang.org/47deg/lambdatestasync/lambda-test-async)
+[![Maven Central](https://img.shields.io/maven-central/v/com.fortysevendeg/lambda-test-async_2.12.svg)](https://maven-badges.herokuapp.com/maven-central/com.fortysevendeg/lambda-test-async_2.12)
 
 LambdaTestAsync is an extension to 
-[LambdaTest](https://github.com/47deg/LambdaTest/blob/master/src/test/scala/demo/Generate.scala). 
+[LambdaTest](https://github.com/47deg/LambdaTest). 
 LambdaTest is a small clean easily extensible functional testing library for Scala.
 LambdaTestAsync extends LambdaTest with support for asynchronous testing.
 
