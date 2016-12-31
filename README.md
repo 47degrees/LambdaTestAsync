@@ -51,7 +51,7 @@ There are two kinds of build-in tests.
 * **`Has`**. the list of events must contain all the elements of a specified list in order. The list of events may also contain other events.
 
 It is also possible to write your own tests. Each custom test should extend the `EventTest[T]` trait where `T` is the type of the events.
-You will need to implement the test method of EventTest. This method is called once for each event and once after all events (typically as the result of a timeout). It has two parameters.
+You will need to implement the `test` method of `EventTest`. This method is called once for each event and once after all events (typically as the result of a timeout). It has two parameters.
 
 * **`events`**. The list of all events so far in reverse order (the head will be the most recent event).
 * **`done`**. Set to true only on the last call.
@@ -59,7 +59,7 @@ You will need to implement the test method of EventTest. This method is called o
 There are three possible results.
 
 * **`Success`**. The test succeeded. No further processing is needed.
-* **`Fail`**. The test failed. No further processing is needed.Fail includes a text message that describes why the test failed.
+* **`Fail`**. The test failed. No further processing is needed. Fail includes a text message that describes why the test failed.
 * **`Continue`**. Keep testing. (If done is true, the test will fail, since there is nothing to continue to).
 
 ## Logged Messages
