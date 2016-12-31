@@ -1,6 +1,5 @@
 # LambdaTestAsync
 
-[![Latest version](https://index.scala-lang.org/47deg/lambdatestasync/lambda-test-async/latest.svg)](https://index.scala-lang.org/47deg/lambdatestasync/lambda-test-async)
 [![Maven Central](https://img.shields.io/maven-central/v/com.fortysevendeg/lambda-test-async_2.12.svg)](https://maven-badges.herokuapp.com/maven-central/com.fortysevendeg/lambda-test-async_2.12)
 
 LambdaTestAsync is an extension to 
@@ -24,4 +23,8 @@ Two specializations are provided:
 
 1. Akka actor messages.
 2. Logged messages.
+
+## Actor Messages
+
+## Logged Messages
 
