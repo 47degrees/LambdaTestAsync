@@ -7,6 +7,9 @@ LambdaTestAsync is an extension to
 LambdaTest is a small clean easily extensible functional testing library for Scala.
 LambdaTestAsync extends LambdaTest with support for asynchronous testing.
 
+You should understand the features of the base LambdaTest system before 
+reading the documentation below.
+
 ## Jar File
 
 Include LambdaTestAsync jar
@@ -42,10 +45,26 @@ The second part is the test. Here each list of messages must exectly match a spe
 
 ## More on Tests
 
+There are two kinds of build-in tests. 
+
+1. HasExact. the list of events must exactly match a specified list.
+2. Has. the list of events must contain all the elements of a specified list in order. The list of events may also contain other events.
+
+It is also possible to write your own tests. Each custom test should extend the EventTest[T] trait where T is the type of the events.
+You will need to implement the test method of EventTest. This method is called once for each event and once after all events (typically as the result of a timeout). It has two parameters.
+
+1. events. The list of all events so far in reverse order (the head will be the most recent event).
+2. done. Set to true only on the last call.
+
+There are three possible results.
+
+1. Success. The test succeeded. No further processing is needed.
+2. Fail. The test failed. No further processing is needed.
+2. Continue. Keep testing. (If done is true, the test will fail, since there is nothing to continue to).
 
 ## Logged Messages
 
 See the [TestLog](https://github.com/47deg/LambdaTestAsync/blob/master/src/test/scala/demo/TestLog.scala) 
-demo for an example that used this conversion.
+demo.
 
 ## Extensions
