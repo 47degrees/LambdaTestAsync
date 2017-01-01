@@ -65,6 +65,15 @@ There are three possible results.
 ## Logged Messages
 
 See the [TestLog](https://github.com/47deg/LambdaTestAsync/blob/master/src/test/scala/demo/TestLog.scala) 
-demo.
+demo. This demo uses the pure Scala 
+[Persist Logger](https://github.com/nestorpersist/logging) where messages are logged as Json.
+
+The example uses two wrapper. The `actorSystemWrap` sets up the Akka actor context. The `logWrap` wrapper sets us the Persist logger and defines the log message event stream `logEvents`.
+
+The `LogTest` test matches Json messages be euqality tests on selected field.
 
 ## Extensions
+
+LambdaTestAsync is not limited to just treams of Actor messages of Json logs. Other kinds of event streams can be supported by extending the `Events[T]` trait. The two built-in streams use Akka actors within their implementation and thier code can serve as samples for adding new stream types.
+
+As discussed above it is also possible to write customized tests by extending the `EvbtTest[T]` trait. Custom event output can be provided by defining new values for the `expectEvents` ` show` parameter with type `Some[T=>String]` which converts each event into a print string.
