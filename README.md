@@ -18,11 +18,16 @@ to the base system, it adds async support by defining the new `expectEvents[T]` 
 You should review the features of the base LambdaTest system before 
 reading the documentation below.
 
-## Jar File
+## Quick Start
 
-Include LambdaTestAsync jar
+Include LambdaTestAsync jars
 
     "com.fortysevendeg" % "lambda-test-sync_2.12" % "1.2.1" % "test"
+    
+In your tests include
+
+    import com.fortysevendeg.lambdatest._
+    import com.fortysevendeg.lambdatestasync._
     
 ## Event Streams
 
