@@ -7,7 +7,15 @@ LambdaTestAsync is an extension to
 LambdaTest is a small clean easily extensible functional testing library for Scala.
 LambdaTestAsync extends LambdaTest with support for asynchronous testing.
 
-You should understand the features of the base LambdaTest system before 
+One of the goals of LambdaTest was to provide a small clean system that can be easily 
+extended to suport new features and to customize it for specific projects. 
+The core API is `LambdaAct` which is a pure functional transform from one `LambdaState` to the
+next `LambdaState`. A composition of simple and compound `LambdaAct`'s is central to
+each user written test.
+LambdaTestAsync is a good example of this extensibility where without any changes 
+to the base system, it adds async support by defining the new `expectEvents[T]` `LambdaAct`.
+
+You should review the features of the base LambdaTest system before 
 reading the documentation below.
 
 ## Jar File
@@ -74,6 +82,6 @@ The `LogTest` test matches Json messages be euqality tests on selected field.
 
 ## Extensions
 
-LambdaTestAsync is not limited to just treams of Actor messages of Json logs. Other kinds of event streams can be supported by extending the `Events[T]` trait. The two built-in streams use Akka actors within their implementation and thier code can serve as samples for adding new stream types.
+LambdaTestAsync is not limited to just streams of Actor messages or Json logs. Other kinds of event streams can be supported by extending the `Events[T]` trait. The two built-in streams use Akka actors within their implementation and their code can serve as samples for adding new stream types.
 
-As discussed above it is also possible to write customized tests by extending the `EvbtTest[T]` trait. Custom event output can be provided by defining new values for the `expectEvents` ` show` parameter with type `Some[T=>String]` which converts each event into a print string.
+As discussed above it is also possible to write customized tests by extending the `EventTest[T]` trait. Custom event output can be provided by defining new values for the `expectEvents` `show` parameter with type `Some[T=>String]` which converts each event into a print string.
