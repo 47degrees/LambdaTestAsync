@@ -4,7 +4,7 @@
 
 LambdaTestAsync is an extension to 
 [LambdaTest](https://github.com/47deg/LambdaTest). 
-LambdaTest is a small clean easily extensible functional testing library for Scala.
+LambdaTest is a functional testing library for Scala.
 LambdaTestAsync extends LambdaTest with support for asynchronous testing.
 
 One of the goals of LambdaTest was to provide a small clean system that can be easily 
