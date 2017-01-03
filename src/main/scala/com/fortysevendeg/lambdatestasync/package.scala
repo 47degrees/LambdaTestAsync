@@ -12,10 +12,12 @@ import scala.util._
 
 package object lambdatestasync {
 
+  /*
   private[lambdatestasync] def pos(offset: Int = 0): String = {
     val f = new Exception("foo").getStackTrace.apply(2 + offset)
     s"${f.getFileName} Line ${f.getLineNumber}"
   }
+  */
 
   /**
     * The type of messages sent to a Probe actor.
@@ -160,7 +162,7 @@ package object lambdatestasync {
     info: String = "",
     show: Option[T ⇒ String] = None,
     timeout: FiniteDuration = 1 second,
-    p: String = pos()
+    p: String = srcPos()
   )(body: ⇒ LambdaAct)(test: EventTest[T])(implicit system: ActorSystem): LambdaAct = {
 
     import EventActor._

@@ -6,7 +6,7 @@ name := "lambda-test-async"
 
 organization := "com.fortysevendeg"
 
-version := "1.2.1"
+version := "1.3.0"
 
 scalaVersion := "2.12.0"
 
@@ -19,7 +19,7 @@ testFrameworks += new TestFramework("com.fortysevendeg.lambdatest.sbtinterface.L
 fork in Test := true
 
 libraryDependencies ++= Seq(
-  "com.fortysevendeg" %% "lambda-test" % "1.2.1",
+  "com.fortysevendeg" %% "lambda-test" % "1.3.0",
   "com.persist" % "persist-logging_2.12" % "1.3.0"
 )
 
