@@ -22,7 +22,7 @@ reading the documentation below.
 
 Include LambdaTestAsync jars
 
-    "com.fortysevendeg" % "lambda-test-sync_2.12" % "1.3.0" % "test"
+    "com.fortysevendeg" % "lambda-test-async_2.12" % "1.3.0" % "test"
     
 In your tests include
 
