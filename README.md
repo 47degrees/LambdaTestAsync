@@ -1,6 +1,12 @@
-# LambdaTestAsync
-
 [![Maven Central](https://img.shields.io/maven-central/v/com.fortysevendeg/lambda-test-async_2.12.svg)](https://maven-badges.herokuapp.com/maven-central/com.fortysevendeg/lambda-test-async_2.12)
+
+# LambdaTestAsync (ABANDONED)
+
+### DEPRECATION NOTICE
+The LambdaTestAsync was an extension to LambdaTest with support for asynchronous testing. It was developed between Dec 2016 and Feb 2017.
+47 Degrees has discontinued the development and maintenance of this library. The source code is left here for those interesting in studying it.
+
+## Introduction
 
 LambdaTestAsync is an extension to 
 [LambdaTest](https://github.com/47deg/LambdaTest). 
