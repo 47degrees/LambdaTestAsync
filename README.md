@@ -4,7 +4,7 @@
 
 ### DEPRECATION NOTICE
 The LambdaTestAsync was an extension to LambdaTest with support for asynchronous testing. It was developed between Dec 2016 and Feb 2017.
-47 Degrees has discontinued the development and maintenance of this extension. The source code is left here for those interesting in studying it.
+47 Degrees has discontinued the development and maintenance of this extension. The source code is left here for those interested in studying it.
 
 ## Introduction
 
